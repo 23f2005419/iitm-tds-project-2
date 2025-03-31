@@ -10,7 +10,7 @@ import os
 import httpx
 from typing import Optional
 import os
-from .backend.tool_function import tool_functions
+from .tool_function import tool_functions
 
 
 AIPROXY_TOKEN = os.getenv("AIPROXY_TOKEN")
