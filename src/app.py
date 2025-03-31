@@ -37,11 +37,11 @@ app.add_middleware(
 )
 
 # app.mount("/static", StaticFiles(directory="frontend/static"), name="static")
-templates = Jinja2Templates(directory="./frontend")
+# templates = Jinja2Templates(directory="./frontend")
 
-@app.get("/", response_class=HTMLResponse)
-async def read_index(request: Request):
-    return templates.TemplateResponse(request=request, name="index.html")
+@app.get("/")
+async def read_index():
+    return "index.html"
 
 @app.post("/api")
 async def answer_question(
