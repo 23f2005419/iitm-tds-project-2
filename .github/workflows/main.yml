@@ -14,7 +14,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install uvicorn
+          pip install -r src/requirements.txt
 
       - name: Set environment variables
         env:
