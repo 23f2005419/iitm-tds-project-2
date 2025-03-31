@@ -1892,8 +1892,7 @@ async def ga3_q8_parse_function_call(query: str) -> str:
         response = {"name": function_name, "arguments": json.dumps(arguments)}
 
         # Create FastAPI implementation code
-        fastapi_code = """
-from fastapi import FastAPI, HTTPException
+        fastapi_code = """from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import re
 import json
@@ -1958,8 +1957,7 @@ async def execute_query(q: str):
     return {
         "name": function_name,
         "arguments": json.dumps(arguments)
-    }
-"""
+    }"""
 
         return f"""
 # Function Call Parser
