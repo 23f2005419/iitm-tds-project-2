@@ -21,9 +21,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, HTMLResponse
 from fastapi.templating import Jinja2Templates
 from typing import List
-from backend.llmAgent import *
-from backend.service import *
-from backend.functions import *
+from .backend.llmAgent import *
+from .backend.service import *
+from .backend.functions import *
 import httpx
 import re
 
