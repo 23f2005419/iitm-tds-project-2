@@ -36,8 +36,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.mount("/static", StaticFiles(directory="frontend/static"), name="static")
-templates = Jinja2Templates(directory="frontend")
+# app.mount("/static", StaticFiles(directory="frontend/static"), name="static")
+templates = Jinja2Templates(directory="./frontend")
 
 @app.get("/", response_class=HTMLResponse)
 async def read_index(request: Request):
