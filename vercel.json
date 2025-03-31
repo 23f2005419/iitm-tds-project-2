@@ -1,12 +1,15 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "/",
-      "use": "@vercel/docker",
-      "config": {
-        "dockerfile": "/Dockerfile"
+    "version": 2,
+    "builds": [
+      {
+        "src": "app.py",
+        "use": "@vercel/python"
       }
-    }
-  ]
-}
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "app.py"
+      }
+    ]
+  }
